@@ -1,0 +1,59 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px; /* Adjust based on your header height */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Flask App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Início<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Entre em Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        <h1>Bem-vindo a página inicial!</h1>
+          <p>Este é um esboço da página inicial de uma aplicação Flask. Você pode personalizar esta página ainda mais com base nas necessidades da sua aplicação.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac dolor ut nisl efficitur fermentum. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In sagittis nulla ut augue vestibulum, eget vehicula odio ultricies. Fusce sit amet luctus dui. Integer varius felis a libero vestibulum, id consectetur libero dictum. In ut diam semper, malesuada velit nec, fermentum urna.</p>
+          <p>Nunc sit amet diam quis sem dignissim maximus. Vestibulum rutrum sapien vel turpis vehicula, in hendrerit quam gravida. Nulla non est nec metus hendrerit semper sed eget ligula. Quisque fringilla libero vel felis lacinia sollicitudin. Donec tincidunt, nisi in hendrerit tempor, lacus tellus accumsan lacus, eu varius ex nisi eget arcu. Phasellus gravida, felis ut hendrerit convallis, tortor nulla maximus ipsum, in aliquam nisi risus ac mauris. Nulla nec lectus vel eros faucibus luctus.</p>
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
